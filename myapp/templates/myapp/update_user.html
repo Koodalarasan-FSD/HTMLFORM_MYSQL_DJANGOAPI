@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update User</title>
+</head>
+<body>
+    <h2>Update User</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+    <a href="{% url 'index' %}">Back to List</a>
+</body>
+</html>

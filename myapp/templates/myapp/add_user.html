@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add User</title>
+</head>
+<body>
+    <h2>Add User</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+    <h3>
+        Click <a href="http://127.0.0.1:8000/api/users/" target="_blank">http://127.0.0.1:8000/api/users/</a> 
+        in browser to display api data
+    </h3>
+    <a href="{% url 'index' %}">Back to List</a>
+</body>
+</html>

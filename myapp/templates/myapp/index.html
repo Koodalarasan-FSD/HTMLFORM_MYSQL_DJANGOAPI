@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h2>Users List</h2>
+    <div id="users">
+        {% for user in users %}
+            <p>{{ user.id }}: {{ user.name }} ({{ user.email }})</p>
+            <a href="{% url 'update_user' user.id %}">Update</a>
+        {% endfor %}
+    </div>
+    <h3>
+        Click <a href="http://127.0.0.1:8000/api/users/" target="_blank">http://127.0.0.1:8000/api/users/</a> 
+        in browser to display api data
+    </h3>
+    <a href="{% url 'add_user' %}">Add User</a>
+</body>
+</html>
